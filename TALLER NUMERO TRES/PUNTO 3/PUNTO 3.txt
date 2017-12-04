@@ -1,0 +1,134 @@
+#include <cstdlib>
+#include <iostream>
+#include <stdlib.h>
+#include <conio.h>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    cout << "INGRESE EL TAMAÑO DEL ARREGLO BIDIMENCIONAL";
+    int m;
+    printf("\n");
+    cin >> m;
+    printf("\n ");
+    int matriz[m][m];
+    int positivos=0;
+    int negativos=0;
+    int impares=0;
+    int pares=0;
+    // llenar matriz aleatoria con positivos y negativos
+    for(int i = 0; i < m; i++) {
+    for(int j = 0; j < m; j++) {
+             
+   matriz[i][j] =-99+rand()%(99+100);
+
+    }
+    }
+       
+       
+   //imprimir matriz
+  cout<<"-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n";
+    for(int i = 0; i < m; i++) {
+    for(int j = 0; j < m; j++) {
+             cout<<"[";
+             cout<<matriz[i][j];
+             cout<<"]";
+       }
+       printf("\n");
+    }
+    cout<<"-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n";
+    
+    
+     //pares e impares
+    for(int i = 0; i < m; i++) {
+    for(int j = 0; j < m; j++) {
+            if (matriz[i][j]%2== 0) 
+            {
+                  pares = pares + 1;
+
+             } else {
+                 impares = impares + 1;
+        }     
+    }
+    }
+    //positivos y negativos
+    for(int i = 0; i < m; i++) {
+    for(int j = 0; j < m; j++) {
+            if (matriz[i][j] >= 0) 
+            {
+                    positivos = positivos + 1;
+
+            } else {
+                    negativos = negativos + 1;
+            }    
+     }
+   }
+   
+   
+       // imprimir positivos 
+   cout<<"positivos= ";cout<<positivos;
+   printf("\n");
+   for(int i = 0; i < m; i++) {
+    for(int j = 0; j < m; j++) {
+           
+            if (matriz[i][j] >= 0) 
+            {
+            cout<<matriz[i][j];
+            cout<<",";
+           }
+           
+       }
+       } 
+    printf("\n");
+    printf("\n");
+   //imprimir negativos ;
+   cout<<"negativos= "; cout<<negativos;
+   printf("\n");
+   for(int i = 0; i < m; i++) {
+    for(int j = 0; j < m; j++) {
+           
+            if (matriz[i][j] < 0) 
+            {
+            cout<<matriz[i][j];
+            cout<<",";
+           }
+           
+       }
+       } 
+    printf("\n");
+    printf("\n");
+    
+    
+    
+    //imprimir pares 
+    cout<<"pares= ";cout<<pares;
+    printf("\n");
+    for (int i = 0; i < m; i++) {
+            for (int j = 0; j < m; j++) {
+                if (matriz[i][j]%2 == 0) {
+                    cout<<matriz[i][j];cout<<",";
+                }
+            }
+         }
+    printf("\n");
+    printf("\n");
+        
+   //imprimir impares
+    cout<<"impares= ";cout<<impares;
+    printf("\n");
+    for (int i = 0; i < m; i++) {
+            for (int j = 0; j < m; j++) {
+                if (matriz[i][j]%2 != 0) {
+                    cout<<matriz[i][j];cout<<",";
+                }
+            }
+         }
+    printf("\n");
+         
+    
+    
+    
+    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}

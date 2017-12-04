@@ -1,0 +1,42 @@
+#include <cstdlib>
+#include <iostream>
+#include <cstring>
+#include <iostream> 
+#include <string.h> 
+#include <stdlib.h> 
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    cout<<"cuantos numeros va a ingresar?\n";
+    int cantidad=0;
+    cin>>cantidad;
+    cout<<"ingrese los";cout<<cantidad ;cout<<"numeros\n";
+    char num[50];
+    cin>>num;
+    char* final[cantidad];
+    char* point;
+    point=strtok(num,",");
+    int a=0; 
+    for (int x = 0; x < cantidad; x++) {
+           while(point!=NULL){
+    
+    
+    point=strtok(NULL,",");
+    final[a]=point;
+    
+      }  
+            a++; 
+    }
+    
+   for (int x = 0; x <= cantidad; x++) {
+   cout<<final[x];
+   }
+    
+    
+ 
+ 
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}

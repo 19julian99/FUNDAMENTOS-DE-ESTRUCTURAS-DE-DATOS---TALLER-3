@@ -1,0 +1,45 @@
+InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader leer = new BufferedReader(isr);
+        int matriz[][] =new int [4][4];
+        System.out.println("\ningrese los numeros SEPARADOS POR COMA");
+        String numeros = leer.readLine();
+        String pre[] = numeros.split(",");
+        int array[] = new int[pre.length];
+        int m = (int) Math.sqrt(pre.length);
+        
+        
+        for (int i = 0; i < pre.length; i++) {
+            array[i] = Integer.parseInt(pre[i]);
+        }
+        
+         
+         
+         int cont = 0;
+
+         for (int x = 0; x < m; x++) {
+             for (int y = 0; y < m; y++) {
+                 matriz[y][x] = array[cont];
+                 cont++;
+             }
+         }
+         
+        
+        for (int x = 0; x < m; x++) {
+            for (int y = 0; y < m; y++) {
+            	System.out.print("["+matriz[y][x]+"]");
+                
+            }
+            System.out.print("\n");
+        }
+        
+        System.out.print("\nasabsajdhsaduhsad\n");
+        for (int x = 0; x < m; x++) {
+            for (int y = 0; y < m; y++) {
+            	System.out.print("["+matriz[x][y]+"]");
+                
+            }
+            System.out.print("\n");
+        }
+        
+	}
+}
